@@ -30,15 +30,20 @@ public class Service extends AppCompatActivity {
                 msg = msg + (char)token;
             }
             reader.close();
-            String list[] = msg.split(",");
-            ((Button) (findViewById(R.id.buttons1))).setText(list[0]);
-            ((Button) (findViewById(R.id.buttons2))).setText(list[1]);
-            ((Button) (findViewById(R.id.buttons3))).setText(list[2]);
-            ((Button) (findViewById(R.id.buttons4))).setText(list[3]);
-            ((Button) (findViewById(R.id.buttons5))).setText(list[4]);
-            ((Button) (findViewById(R.id.buttons6))).setText(list[5]);
-            ((Button) (findViewById(R.id.buttons7))).setText(list[6]);
-            ((Button) (findViewById(R.id.buttons8))).setText(list[7]);
+            try {
+                String list[] = msg.split(",");
+                ((Button) (findViewById(R.id.buttons1))).setText(list[0]);
+                ((Button) (findViewById(R.id.buttons2))).setText(list[1]);
+                ((Button) (findViewById(R.id.buttons3))).setText(list[2]);
+                ((Button) (findViewById(R.id.buttons4))).setText(list[3]);
+                ((Button) (findViewById(R.id.buttons5))).setText(list[4]);
+                ((Button) (findViewById(R.id.buttons6))).setText(list[5]);
+                ((Button) (findViewById(R.id.buttons7))).setText(list[6]);
+                ((Button) (findViewById(R.id.buttons8))).setText(list[7]);
+            } catch(Exception e){
+
+            }
+
 
         } catch (FileNotFoundException e) {
             Log.d("Error", "File not found.");
